@@ -1,0 +1,16 @@
+
+
+Implementation:
+
+We approached the problems as the following:
+1- Iterating over all the triangle indices
+2-for each triangle fetch its vertices
+3-Then for each triangle, store the iso-value of its virtices and vertex points in two vectors
+4-We use an utility function, "find triangle_type_fucntion", which returns 1 if all the vertices have positive iso values andreturns 8 if all virtices have negative value and etc.
+5-If the signs are different, use linear interpolation based on the iso-values to compute the edge that passes through that triangle  
+To compute the linear interpolation we have used the formula from the link below(slide 20):
+https://www.cse.wustl.edu/~taoju/cse554/lectures/lect04_Contouring_I.pdf
+6- Finally segment points are added to the "segment_points" vectors according to the quidelines
+
+Sample output:
+We have attached some outputs for the regular mesh 3 and all the implicit functions. You can find them as sample_{1,2,3,4} in order of implicit functions in the combobox.
